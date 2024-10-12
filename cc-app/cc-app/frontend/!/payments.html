@@ -1,0 +1,32 @@
+<!-- frontend/templates/payments.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payments</title>
+    <style>
+	h1{
+		font-size: 50px;
+	}
+	body, input, button, ul, li {
+		font-size: 30px;
+	}
+    </style>
+</head>
+<body>
+    <h1>Payments</h1>
+    <form action="/payments" method="post">
+        <input type="text" name="id" placeholder="Payment ID">
+        <input type="text" name="order_id" placeholder="Order ID">
+        <input type="text" name="amount" placeholder="Amounts">
+        <button type="submit">Make Payment</button>
+    </form>
+    <ul>
+        {% for payment in payments %}
+            <li>{{ payment }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+

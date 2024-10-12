@@ -1,0 +1,32 @@
+<!-- frontend/templates/orders.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders</title>
+    <style>
+        h1{
+             font-size: 50px;
+        }
+        body, input, button, ul, li {
+             font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Orders</h1>
+    <form action="/orders" method="post">
+        <input type="text" name="id" placeholder="Order ID">
+        <input type="text" name="product_id" placeholder="Product ID">
+        <input type="text" name="quantity" placeholder="Quantity">
+        <button type="submit">Place Order</button>
+    </form>
+    <ul>
+        {% for order in orders %}
+            <li>{{ order }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+

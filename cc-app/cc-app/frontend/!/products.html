@@ -1,0 +1,31 @@
+<!-- frontend/templates/products.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <style>
+        h1{
+           font-size: 50px;
+        }
+        body, input, button, ul, li {
+           font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Products</h1>
+    <form action="/products" method="post">
+        <input type="text" name="id" placeholder="Product ID">
+        <input type="text" name="name" placeholder="Product Name">
+        <button type="submit">Add Product</button>
+    </form>
+    <ul>
+        {% for product in products %}
+            <li>{{ product }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+

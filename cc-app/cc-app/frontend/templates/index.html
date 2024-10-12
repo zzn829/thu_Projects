@@ -1,0 +1,80 @@
+<!-- frontend/templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 30px; /* 字體大小 */
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            text-align: center;
+	    flex: 1;
+	    color: white;
+	    font-size: 23px; /* 字體大小 */
+        }
+        nav ul li {
+            display: block; /* 讓列表水平排列 */
+            margin: 40px 0; /* 調整列表項間距 */
+        }
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 15px 0; /* 調整列表項內邊距 */
+            text-decoration: none;
+            font-size: 40px; /* 字體大小 */
+        }
+        nav ul li a:hover {
+            background-color: #111;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: auto;
+            font-size: 20px; /* 字體大小 */
+        }
+    </style>
+</head>
+<body>
+   <header>
+        <h1>Welcome to our store! What do you want to buy?</h2>
+	<p>&nbsp;</p> <!-- 增加一個空段落 -->
+        <p>Explore our wide range of products and find what you need.</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/users">Users</a></li>
+            <li><a href="/products">Products</a></li>
+            <li><a href="/orders">Orders</a></li>
+            <li><a href="/payments">Payments</a></li>
+        <p>Wishing you a wonderful day filled with joy and happiness.   Discover the latest trends and shop with confidence.</p>
+	</ul>
+    </nav>
+    <footer>
+	    <p>&copy; 2024 Our Store</p>
+	</footer>
+</body>
+</html>
+
